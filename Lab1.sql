@@ -17,13 +17,13 @@ drop table client
 drop table coach
 go
 create table coach(
-    id int PRIMARY KEY ,
+    id int identity (1,1) PRIMARY KEY ,
     FIO nvarchar(max),
     payment int
 )
 go
 create table client(
-    id int primary key,
+    id int identity (1,1) primary key,
     SecondName nvarchar(30),
     FirstName nvarchar(30),
     Phone nvarchar(15),
@@ -32,12 +32,12 @@ create table client(
 )
 go
 create table hal(
-    id int primary key ,
+    id int identity (1,1) primary key ,
     name nvarchar(max)
 )
 go
 create table abon(
-    id int primary key ,
+    id int identity (1,1) primary key ,
     descr nvarchar(max),
     price int,
     halId int,
@@ -54,10 +54,10 @@ create table record(
     constraint FK_Recor_To_Abon foreign key (abonId) references abon(id)
 )
 
-insert into coach values (1, 'Зубенко Михаил Петрович', 133),(2, 'Мядель Тимофей Дмитриевич', 999),(3, 'Петров Петор Епифанов', 133);
-insert into client values (1, 'Петров', 'Петр', '375296663322',1), (2, 'Семенов', 'Семен', '375291112233',2), (3, 'Дмитро', 'Дима', '375292329988',3);
-insert into hal values  (1,'Гимнастический зал'), (2,'Бассейн'),(3,'Зал аэробики');
-insert into abon values (1, 'Спортивный',99,1), (2, 'Русалка',101,2), (3,'Классный', 88,3);
+insert into coach values ( 'Зубенко Михаил Петрович', 133),( 'Мядель Тимофей Дмитриевич', 999),( 'Петров Петор Епифанов', 133);
+insert into client values ( 'Петров', 'Петр', '375296663322',1), ( 'Семенов', 'Семен', '375291112233',2), ( 'Дмитро', 'Дима', '375292329988',3);
+insert into hal values  ('Гимнастический зал'), ('Бассейн'),('Зал аэробики');
+insert into abon values ('Спортивный',99,1), ('Русалка',101,2), ('Классный', 88,3);
 insert into record values (1,1,'2022-03-01','2022-05-01',0), (2,2,'2022-02-09','2022-05-09',0), (3,3,'2022-01-01','2022-06-01',1);
 go
 
@@ -78,7 +78,7 @@ drop index abon.indexAbon;
 create or alter procedure insertCoach
 as
     begin try
-        insert into coach values (5, 'Пупкин Олег Владимирович', 666)
+        insert into coach values ( 'Пупкин Олег Владимирович', 666)
     end try
     begin catch
         rollback
@@ -94,7 +94,7 @@ drop procedure insertCoach;
 create or alter procedure insertClient
 as
     begin try
-        insert into client values (99, 'Сидоров', 'Степан', '375295557799',2)
+        insert into client values ( 'Сидоров', 'Степан', '375295557799',2)
     end try
     begin catch
         rollback
@@ -104,7 +104,7 @@ go
 
 exec insertClient;
 select * from client;
-delete from client where id = 99;
+delete from client where id = 5;
 drop procedure insertClient;
 
 create or alter procedure insertRecord
@@ -183,3 +183,42 @@ go
 exec checkPass;
 select * from record;
 drop procedure checkPass;
+
+create or alter procedure add_coach
+    @FIO nvarchar(max),
+    @payment int
+as
+    begin
+        insert into coach(FIO, payment) values(@FIO, @payment)
+        select 0;
+    end
+go
+
+
+create or alter procedure drop_coach
+    @id int
+as
+    begin
+        delete from coach where id = @id;
+        select 0;
+    end
+go
+
+
+create or alter procedure change_coach
+    @id int,
+    @FIO nvarchar(max),
+    @payment int
+as
+    begin
+        update coach set FIO=@FIO, payment=@payment
+            where id = @id;
+        select 0;
+    end
+go
+
+create or alter procedure getAllCoaches
+as
+    select * from coach
+go
+

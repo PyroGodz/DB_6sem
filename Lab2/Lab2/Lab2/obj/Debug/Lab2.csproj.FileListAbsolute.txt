@@ -1,0 +1,15 @@
+D:\Study\Practice\DB_6sem\Lab2\Lab2\Lab2\bin\Debug\Lab2.exe.config
+D:\Study\Practice\DB_6sem\Lab2\Lab2\Lab2\bin\Debug\Lab2.exe
+D:\Study\Practice\DB_6sem\Lab2\Lab2\Lab2\bin\Debug\Lab2.pdb
+D:\Study\Practice\DB_6sem\Lab2\Lab2\Lab2\obj\Debug\Lab2.csproj.AssemblyReference.cache
+D:\Study\Practice\DB_6sem\Lab2\Lab2\Lab2\obj\Debug\MainWindow.g.cs
+D:\Study\Practice\DB_6sem\Lab2\Lab2\Lab2\obj\Debug\App.g.cs
+D:\Study\Practice\DB_6sem\Lab2\Lab2\Lab2\obj\Debug\Lab2_MarkupCompile.cache
+D:\Study\Practice\DB_6sem\Lab2\Lab2\Lab2\obj\Debug\Lab2_MarkupCompile.lref
+D:\Study\Practice\DB_6sem\Lab2\Lab2\Lab2\obj\Debug\MainWindow.baml
+D:\Study\Practice\DB_6sem\Lab2\Lab2\Lab2\obj\Debug\Lab2.g.resources
+D:\Study\Practice\DB_6sem\Lab2\Lab2\Lab2\obj\Debug\Lab2.Properties.Resources.resources
+D:\Study\Practice\DB_6sem\Lab2\Lab2\Lab2\obj\Debug\Lab2.csproj.GenerateResource.cache
+D:\Study\Practice\DB_6sem\Lab2\Lab2\Lab2\obj\Debug\Lab2.csproj.CoreCompileInputs.cache
+D:\Study\Practice\DB_6sem\Lab2\Lab2\Lab2\obj\Debug\Lab2.exe
+D:\Study\Practice\DB_6sem\Lab2\Lab2\Lab2\obj\Debug\Lab2.pdb

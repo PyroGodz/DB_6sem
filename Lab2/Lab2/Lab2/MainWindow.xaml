@@ -1,0 +1,32 @@
+﻿<Window x:Class="Lab2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Тренера">
+                <Grid>
+                    <Label x:Name="labelCoachId" Content="ID Тренера" Margin="23,10,665,338"  Grid.Column="1"/>
+                    <TextBox x:Name="textBoxIdCoach" HorizontalAlignment="Left" Height="31" Margin="97,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.Column="1"/>
+
+                    <Label x:Name="labelNameCoach" Content="ФИО" Margin="23,55,673,296" Grid.Column="1"/>
+                    <TextBox x:Name="textBoxNameCoach" HorizontalAlignment="Left" Height="31" Margin="97,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.Column="1"/>
+
+                    <Label x:Name="labelCityCoach" Content="ЗП" Margin="23,103,679,253" Grid.Column="1"/>
+                    <TextBox x:Name="textBoxCityCoach" HorizontalAlignment="Left" Height="32" Margin="97,103,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.Column="1"/>
+
+                    <DataGrid x:Name="usersGrid" HorizontalAlignment="Left" Height="214" Margin="-4,177,-6,-3" VerticalAlignment="Top" Width="792" Grid.ColumnSpan="2"/>
+
+                    <Button x:Name="addCoach" Content="Добавить" Margin="333,10,324,338" Click="addCoach_Click" Grid.Column="1"></Button>
+                    <Button x:Name="dropCoach" Content="Удалить тренера" Margin="333,55,324,290" Click="dropCoach_Click" Grid.Column="1"></Button>
+                    <Button x:Name="changeCoach" Content="Изменить" Margin="333,103,324,242" Click="changeCoach_Click" Grid.Column="1"></Button>
+                    <Button x:Name="allCoach" Content="Все тренера" Margin="491,55,166,296" Click="allCoach_Click" Grid.Column="1" ></Button>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
