@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TabControl>
+        <TabControl Margin="0,10,-0.4,-10">
             <TabItem Header="Тренера">
                 <Grid>
                     <Label x:Name="labelCoachId" Content="ID Тренера" Margin="23,10,665,338"  Grid.Column="1"/>
@@ -25,6 +25,77 @@
                     <Button x:Name="dropCoach" Content="Удалить тренера" Margin="333,55,324,290" Click="dropCoach_Click" Grid.Column="1"></Button>
                     <Button x:Name="changeCoach" Content="Изменить" Margin="333,103,324,242" Click="changeCoach_Click" Grid.Column="1"></Button>
                     <Button x:Name="allCoach" Content="Все тренера" Margin="491,55,166,296" Click="allCoach_Click" Grid.Column="1" ></Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Посетитель">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="16*"/>
+                        <ColumnDefinition Width="773*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="labelClientId" Content="ID Пользователя" Margin="7.5,10,665,338"  Grid.Column="1"/>
+                    <TextBox x:Name="textBoxIdClient" HorizontalAlignment="Left" Height="31" Margin="81.5,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.Column="1"/>
+
+                    <Label x:Name="labelSecondNameClient" Content="Фамилия" Margin="7.5,55,673,296" Grid.Column="1"/>
+                    <TextBox x:Name="textBoxSecondNameClient" HorizontalAlignment="Left" Height="31" Margin="81.5,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.Column="1"/>
+
+                    <Label x:Name="labelFirstNameClient" Content="Имя" Margin="7.5,103,679,253" Grid.Column="1"/>
+                    <TextBox x:Name="textBoxFirstNameClient" HorizontalAlignment="Left" Height="32" Margin="81.5,103,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.Column="1"/>
+
+                    <Label x:Name="labelPhoneClient" Content="Телефон" Margin="0,157,687,183" Grid.Column="1"/>
+                    <TextBox x:Name="textBoxPhoneClient" HorizontalAlignment="Left" Height="32" Margin="82,157,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.Column="1"/>
+
+                    <Label x:Name="labelCoachIdClient" Content="Id тренера" Margin="8,209,679,154" Grid.Column="1"/>
+                    <TextBox x:Name="textBoxCoachIdClient" HorizontalAlignment="Left" Height="32" Margin="82,209,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.Column="1"/>
+
+
+                    <DataGrid x:Name="usersClientGrid" HorizontalAlignment="Left" Height="144" Margin="-4,250,0,-2" VerticalAlignment="Top" Width="792" Grid.ColumnSpan="2"/>
+
+                    <Button x:Name="addClient" Content="Добавить" Margin="317.5,10,324,338" Click="addClient_Click" Grid.Column="1"></Button>
+                    <Button x:Name="dropClient" Content="Удалить посетителей" Margin="317.5,55,324,290" Click="dropClient_Click" Grid.Column="1"></Button>
+                    <Button x:Name="changeClient" Content="Изменить" Margin="317.5,103,324,242" Click="changeClient_Click" Grid.Column="1"></Button>
+                    <Button x:Name="allClient" Content="Все посетители" Margin="475.5,55,166,296" Click="allClient_Click" Grid.Column="1" ></Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Зал" RenderTransformOrigin="0.267,3.088">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0*"/>
+                        <ColumnDefinition Width="0*"/>
+                        <ColumnDefinition Width="126*"/>
+                        <ColumnDefinition Width="61*"/>
+                        <ColumnDefinition Width="34*"/>
+                        <ColumnDefinition Width="566*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="labelHalId" Content="Номер зала" Margin="23,10,4.4,338" Grid.ColumnSpan="3"/>
+                    <TextBox x:Name="textBoxIdHal" HorizontalAlignment="Left" Height="31" Margin="119,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.ColumnSpan="6"/>
+
+                    <Label x:Name="labelNameHal" Content="Название зала" Margin="23,55,12.4,296" Grid.ColumnSpan="3"/>
+                    <TextBox x:Name="textBoxNamehal" HorizontalAlignment="Left" Height="31" Margin="119,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.ColumnSpan="6"/>
+
+                    <DataGrid x:Name="usersHalGrid" HorizontalAlignment="Left" Height="214" Margin="0,178,-4.391,0" VerticalAlignment="Top" Width="792" Grid.ColumnSpan="6"/>
+
+                    <Button x:Name="addHal" Content="Добавить" Margin="112.791,10,323.609,338" Click="addHal_Click" Grid.Column="5"></Button>
+                    <Button x:Name="dropHal" Content="Удалить зал" Margin="112.791,55,323.609,290" Click="dropHal_Click" Grid.Column="5"></Button>
+                    <Button x:Name="changeHal" Content="Изменить" Margin="112.791,103,323.609,242" Click="changeHal_Click" Grid.Column="5"></Button>
+                    <Button x:Name="allHal" Content="Все залы" Margin="270.791,55,165.609,296" Click="allHal_Click" Grid.Column="5" ></Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Лаба 4">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="16*"/>
+                        <ColumnDefinition Width="773*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="Point1" Content="Точка 1" Margin="23,10,4.4,338" Grid.ColumnSpan="3"/>
+                    <TextBox x:Name="textBoxPoint1" HorizontalAlignment="Left" Height="31" Margin="119,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.ColumnSpan="6"/>
+
+                    <Label x:Name="Point2" Content="Точка 2" Margin="23,55,12.4,296" Grid.ColumnSpan="3"/>
+                    <TextBox x:Name="textBoxPoint2" HorizontalAlignment="Left" Height="31" Margin="119,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.ColumnSpan="6"/>
+
+                    <DataGrid x:Name="PointGrid" HorizontalAlignment="Left" Height="214" Margin="0,178,-4.391,0" VerticalAlignment="Top" Width="792" Grid.ColumnSpan="6"/>
+                    <Button x:Name="Places" Content="Вывод помещений" Margin="533,10,120,338" Click="allPlaces_Click" Grid.Column="1"></Button>
+                    <Button x:Name="Distance" Content="Дистанция 2 точек" Margin="371,10,282,338" Click="Distance_Click" Grid.Column="1"></Button>
                 </Grid>
             </TabItem>
         </TabControl>

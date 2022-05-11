@@ -1,0 +1,10 @@
+D:\Study\Practice\DB_6sem\Lab3\Lab3\bin\Debug\Lab3.dll.config
+D:\Study\Practice\DB_6sem\Lab3\Lab3\bin\Debug\Lab3.dll
+D:\Study\Practice\DB_6sem\Lab3\Lab3\bin\Debug\Lab3.pdb
+D:\Study\Practice\DB_6sem\Lab3\Lab3\bin\Debug\System.Data.SqlClient.dll
+D:\Study\Practice\DB_6sem\Lab3\Lab3\bin\Debug\System.Data.SqlClient.xml
+D:\Study\Practice\DB_6sem\Lab3\Lab3\obj\Debug\Lab3.csproj.CoreCompileInputs.cache
+D:\Study\Practice\DB_6sem\Lab3\Lab3\obj\Debug\Lab3.csproj.CopyComplete
+D:\Study\Practice\DB_6sem\Lab3\Lab3\obj\Debug\Lab3.dll
+D:\Study\Practice\DB_6sem\Lab3\Lab3\obj\Debug\Lab3.pdb
+D:\Study\Practice\DB_6sem\Lab3\Lab3\obj\Debug\Lab3.csproj.AssemblyReference.cache

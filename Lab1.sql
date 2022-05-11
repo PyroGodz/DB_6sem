@@ -3,6 +3,16 @@ create database SportPlace;
 go
 use SportPlace;
 
+select name from sys.database_principals
+
+CREATE LOGIN Pyrog
+    WITH PASSWORD = '1111';
+GO
+
+CREATE USER Pyrog FOR LOGIN Pyrog;
+GO
+grant insert, select, update, delete to Pyrog
+
 go
 select * from coach
 select * from client
@@ -17,23 +27,23 @@ drop table client
 drop table coach
 go
 create table coach(
-    id int identity (1,1) PRIMARY KEY ,
-    FIO nvarchar(max),
-    payment int
+    id integer identity (1,1) PRIMARY KEY not null,
+    FIO nvarchar(max) not null,
+    payment integer not null
 )
 go
 create table client(
-    id int identity (1,1) primary key,
-    SecondName nvarchar(30),
-    FirstName nvarchar(30),
-    Phone nvarchar(15),
-    coachId int,
+    id integer identity (1,1) primary key not null,
+    SecondName nvarchar(30) not null ,
+    FirstName nvarchar(30) not null ,
+    Phone nvarchar(15) null,
+    coachId int null,
     constraint FK_Client_To_Coach foreign key (coachId) references Coach(id)
 )
 go
 create table hal(
-    id int identity (1,1) primary key ,
-    name nvarchar(max)
+    id int identity (1,1) primary key not null ,
+    name nvarchar(max) not null
 )
 go
 create table abon(
@@ -45,11 +55,11 @@ create table abon(
 )
 go
 create table record(
-    clientId int,
-    abonId int,
-    startAbon date,
-    endAbon date,
-    isPaid bit,
+    clientId int not null ,
+    abonId int not null ,
+    startAbon date not null ,
+    endAbon date not null ,
+    isPaid bit not null ,
     constraint FK_Recor_To_Client foreign key (clientId) references client(id),
     constraint FK_Recor_To_Abon foreign key (abonId) references abon(id)
 )
@@ -193,6 +203,26 @@ as
         select 0;
     end
 go
+create or alter procedure add_hal
+    @name nvarchar(max)
+as
+    begin
+        insert into hal values (@name)
+        select 0;
+    end
+go
+
+create or alter procedure add_client
+    @Secondname nvarchar(max),
+    @Firstname nvarchar(max),
+    @Phone nvarchar(max),
+    @CoachId int
+as
+    begin
+        insert into client values (@Secondname, @Firstname, @Phone,@CoachId)
+        select 0;
+    end
+go
 
 
 create or alter procedure drop_coach
@@ -200,6 +230,23 @@ create or alter procedure drop_coach
 as
     begin
         delete from coach where id = @id;
+        select 0;
+    end
+go
+
+create or alter procedure drop_client
+    @id int
+as
+    begin
+        delete from client where id = @id;
+        select 0;
+    end
+go
+create or alter procedure drop_hal
+    @id int
+as
+    begin
+        delete from hal where id = @id;
         select 0;
     end
 go
@@ -217,8 +264,78 @@ as
     end
 go
 
+create or alter procedure change_client
+    @id int,
+    @Secondname nvarchar(max),
+    @Firstname nvarchar(max),
+    @Phone nvarchar(max),
+    @CoachId int
+as
+    begin
+        update client set SecondName = @Secondname, FirstName = @Firstname, Phone = @Phone, coachId = @CoachId
+            where id = @id;
+        select 0;
+    end
+go
+
+create or alter procedure change_hal
+    @id int,
+    @name nvarchar(max)
+as
+    begin
+        update hal set  name = @name where id = @id;
+        select 0;
+    end
+go
+
 create or alter procedure getAllCoaches
 as
     select * from coach
 go
+create or alter procedure getAllHals
+as
+    select * from hal
+go
+create or alter procedure getAllClients
+as
+    select * from client
+go
 
+
+create or alter procedure getCount as select count(*) from coach where payment < 1000
+go
+-------------------------------Lab_3--------------------------------------------------------
+
+sp_configure 'clr enabled', 1
+Reconfigure
+EXEC sp_configure 'clr strict security', 0;
+
+RECONFIGURE;
+drop procedure ReadFile
+drop procedure WriteFile
+drop assembly ReadTextLib;
+alter database SportPlace set trustworthy on;
+CREATE ASSEMBLY ReadTextLib from 'D:\Study\Practice\DB_6sem\Lab3\Lab3\bin\Debug\Lab3.dll' WITH PERMISSION_SET= unsafe
+
+create or alter procedure WriteFile @filename nvarchar(max), @data nvarchar(max)
+as
+external name [ReadTextLib].[Lab3.Task1].[WriteFile]
+go
+
+exec WriteFile 'D:\a.txt', 'sportEvent';
+
+create or alter procedure ReadFile @path nvarchar(max)
+as
+external name [ReadTextLib].[Lab3.Task1].[ReadTextFile]
+go
+
+exec ReadFile 'D:\a.txt';
+
+
+drop type dbo.Address
+CREATE TYPE dbo.Address
+EXTERNAL NAME ReadTextLib.[Address];
+
+-----------------------------Lab_4----------------------------------------
+
+select * from gadm40_blr_2
