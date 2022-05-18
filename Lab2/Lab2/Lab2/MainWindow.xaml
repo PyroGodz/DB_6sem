@@ -81,23 +81,6 @@
                     <Button x:Name="allHal" Content="Все залы" Margin="270.791,55,165.609,296" Click="allHal_Click" Grid.Column="5" ></Button>
                 </Grid>
             </TabItem>
-            <TabItem Header="Лаба 4">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="16*"/>
-                        <ColumnDefinition Width="773*"/>
-                    </Grid.ColumnDefinitions>
-                    <Label x:Name="Point1" Content="Точка 1" Margin="23,10,4.4,338" Grid.ColumnSpan="3"/>
-                    <TextBox x:Name="textBoxPoint1" HorizontalAlignment="Left" Height="31" Margin="119,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.ColumnSpan="6"/>
-
-                    <Label x:Name="Point2" Content="Точка 2" Margin="23,55,12.4,296" Grid.ColumnSpan="3"/>
-                    <TextBox x:Name="textBoxPoint2" HorizontalAlignment="Left" Height="31" Margin="119,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="178" Grid.ColumnSpan="6"/>
-
-                    <DataGrid x:Name="PointGrid" HorizontalAlignment="Left" Height="214" Margin="0,178,-4.391,0" VerticalAlignment="Top" Width="792" Grid.ColumnSpan="6"/>
-                    <Button x:Name="Places" Content="Вывод помещений" Margin="533,10,120,338" Click="allPlaces_Click" Grid.Column="1"></Button>
-                    <Button x:Name="Distance" Content="Дистанция 2 точек" Margin="371,10,282,338" Click="Distance_Click" Grid.Column="1"></Button>
-                </Grid>
-            </TabItem>
         </TabControl>
     </Grid>
 </Window>

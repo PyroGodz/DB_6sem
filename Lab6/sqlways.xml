@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<DatabaseInfo DatabaseName="SportPlace" DbmsType="2" DbmsName="Microsoft SQL Server" DbmsVersion="15.00.2000" MajorDbmsVersion="15" MinorDbmsVersion="00" DataDriverName="SQLSRV32.DLL" DataDriverVersion="10.00.19041" ODBCVersion="03.80.0000" active="true" DataSourceName="SportPlace">
+    <MappingOptions>
+        <Tables>
+            <Schemas>
+                <Schema name="dbo" target="dbo"/>
+            </Schemas>
+        </Tables>
+        <Views>
+            <Schemas>
+                <Schema name="dbo" target="dbo"/>
+            </Schemas>
+        </Views>
+        <StoredProcedures>
+            <Schemas>
+                <Schema name="dbo" target="dbo"/>
+            </Schemas>
+        </StoredProcedures>
+        <Functions>
+            <Schemas>
+                <Schema name="dbo" target="dbo"/>
+            </Schemas>
+        </Functions>
+        <Triggers>
+            <Schemas>
+                <Schema name="insertClientMessage" target="insertClientMessage"/>
+                <Schema name="insertCoachMessage" target="insertCoachMessage"/>
+            </Schemas>
+        </Triggers>
+    </MappingOptions>
+    <SelectedObjects>
+        <ResolvedDataTypes/>
+        <Tables>
+            <Table schema="dbo" name="abon" rows_search="" rows_search_using="0"/>
+            <Table schema="dbo" name="client" rows_search="" rows_search_using="0"/>
+            <Table schema="dbo" name="coach" rows_search="" rows_search_using="0"/>
+            <Table schema="dbo" name="gadm40_blr_2" rows_search="" rows_search_using="0"/>
+            <Table schema="dbo" name="geometry_columns" rows_search="" rows_search_using="0"/>
+            <Table schema="dbo" name="hal" rows_search="" rows_search_using="0"/>
+            <Table schema="dbo" name="record" rows_search="" rows_search_using="0"/>
+            <Table schema="dbo" name="spatial_ref_sys" rows_search="" rows_search_using="0"/>
+            <Table schema="dbo" name="SportPlaces" rows_search="" rows_search_using="0"/>
+        </Tables>
+        <Views>
+            <View schema="dbo" name="highPaidCoach"/>
+            <View schema="dbo" name="paidClients"/>
+        </Views>
+        <StoredProcedures>
+            <StoredProcedure schema="dbo" name="add_client" specific_name="add_client"/>
+            <StoredProcedure schema="dbo" name="add_coach" specific_name="add_coach"/>
+            <StoredProcedure schema="dbo" name="add_hal" specific_name="add_hal"/>
+            <StoredProcedure schema="dbo" name="AddCoachUsingHierarchy" specific_name="AddCoachUsingHierarchy"/>
+            <StoredProcedure schema="dbo" name="addSportPlace" specific_name="addSportPlace"/>
+            <StoredProcedure schema="dbo" name="allSportPlaces" specific_name="allSportPlaces"/>
+            <StoredProcedure schema="dbo" name="CalculateShortestPath" specific_name="CalculateShortestPath"/>
+            <StoredProcedure schema="dbo" name="CalculateShortestPath2" specific_name="CalculateShortestPath2"/>
+            <StoredProcedure schema="dbo" name="change_client" specific_name="change_client"/>
+            <StoredProcedure schema="dbo" name="change_coach" specific_name="change_coach"/>
+            <StoredProcedure schema="dbo" name="change_hal" specific_name="change_hal"/>
+            <StoredProcedure schema="dbo" name="checkPass" specific_name="checkPass"/>
+            <StoredProcedure schema="dbo" name="drop_client" specific_name="drop_client"/>
+            <StoredProcedure schema="dbo" name="drop_coach" specific_name="drop_coach"/>
+            <StoredProcedure schema="dbo" name="drop_hal" specific_name="drop_hal"/>
+            <StoredProcedure schema="dbo" name="EnlargeLocation" specific_name="EnlargeLocation"/>
+            <StoredProcedure schema="dbo" name="getAllClients" specific_name="getAllClients"/>
+            <StoredProcedure schema="dbo" name="getAllCoaches" specific_name="getAllCoaches"/>
+            <StoredProcedure schema="dbo" name="getAllHals" specific_name="getAllHals"/>
+            <StoredProcedure schema="dbo" name="getCount" specific_name="getCount"/>
+            <StoredProcedure schema="dbo" name="GetCoverageMap" specific_name="GetCoverageMap"/>
+            <StoredProcedure schema="dbo" name="GetPlaceMap" specific_name="GetPlaceMap"/>
+            <StoredProcedure schema="dbo" name="GetStorageMap" specific_name="GetStorageMap"/>
+            <StoredProcedure schema="dbo" name="insertClient" specific_name="insertClient"/>
+            <StoredProcedure schema="dbo" name="insertCoach" specific_name="insertCoach"/>
+            <StoredProcedure schema="dbo" name="insertRecord" specific_name="insertRecord"/>
+            <StoredProcedure schema="dbo" name="moveHid" specific_name="moveHid"/>
+            <StoredProcedure schema="dbo" name="selectHid" specific_name="selectHid"/>
+        </StoredProcedures>
+        <Functions>
+            <Function schema="dbo" name="fn_diagramobjects" specific_name="fn_diagramobjects"/>
+            <Function schema="dbo" name="isAllowed" specific_name="isAllowed"/>
+        </Functions>
+        <Triggers>
+            <Trigger name="insertClientMessage"/>
+            <Trigger name="insertCoachMessage"/>
+        </Triggers>
+    </SelectedObjects>
+</DatabaseInfo>

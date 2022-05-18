@@ -1,0 +1,1 @@
+SportPlace,dbo,gadm40_blr_2,ogr_geometry,2,4326,POLYGON

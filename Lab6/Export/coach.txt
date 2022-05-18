@@ -1,0 +1,7 @@
+1,.\lobs\coach\coach.0,222,.\lobs\coach\coach.1
+2,.\lobs\coach\coach.2,999,.\lobs\coach\coach.3
+3,.\lobs\coach\coach.4,133,.\lobs\coach\coach.5
+18,.\lobs\coach\coach.6,123,.\lobs\coach\coach.7
+19,.\lobs\coach\coach.8,123,.\lobs\coach\coach.9
+21,.\lobs\coach\coach.10,222,.\lobs\coach\coach.11
+22,.\lobs\coach\coach.12,333,.\lobs\coach\coach.13

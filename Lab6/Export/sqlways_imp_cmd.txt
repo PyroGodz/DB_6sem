@@ -1,0 +1,1 @@
+ISDBLaunch.exe /BAT=D:\Study\Practice\DB_6sem\Lab6\Export\sqlways_all.bat /ARG=all;

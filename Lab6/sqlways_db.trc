@@ -1,0 +1,301 @@
+Ispirer SQLWays Wizard 10.22.3.6944 (x64) 
+OS: Microsoft Windows 10 Professional (build 19041), 64 bit
+OS Locale: system-default code page = 866
+OS Locale: Format - ru-RU (Russian); Location - ������; Current language - ru-RU (Russian)
+
+Database general info:
+SQL_DATA_SOURCE_NAME: SportPlace
+SQL_DATABASE_NAME: SportPlace
+SQL_DBMS_NAME: Microsoft SQL Server
+SQL_SERVER_NAME: PYROG
+ODBC driver description: SQL Server
+SQL_DRIVER_NAME: SQLSRV32.DLL
+SQL_DRIVER_VER: 10.00.19041
+SQL_ODBC_VER: 03.80.0000
+SQL_DBMS_VER: 15.00.2000
+SQL_DBMS_SUB_VER: 
+SQL_MAX_CATALOG_NAME_LEN: 128
+SQL_MAX_COLUMN_NAME_LEN: 128
+SQL_MAX_CURSOR_NAME_LEN: 128
+SQL_MAX_PROCEDURE_NAME_LEN: 134
+SQL_MAX_SCHEMA_NAME_LEN: 128
+SQL_MAX_TABLE_NAME_LEN: 128
+SQL_IDENTIFIER_CASE: SQL_IC_MIXED
+SQL_IDENTIFIER_QUOTE_CHAR: "
+SQL_QUOTED_IDENTIFIER_CASE: SQL_IC_MIXED
+SQL_ATTR_CURRENT_CATALOG: SportPlace
+SQL_COLLATION_SEQ: 潃敤倠条⁥㈱ㄵ
+
+Query file name: MSSQL.xml
+GetObjects for: Tables
+Query str: 
+        select NULL,
+        u.name as SCHEMA_NAME,
+        o.name as TAB_NAME,
+        NULL as TABLE_TYPE,
+        NULL as REMARKS
+        from sysobjects o, sys.schemas u
+        where type = 'U'
+        and o.uid = u.schema_id
+        and o.name not in ('DTPROPERTIES', 'sysdiagrams')
+        and o.name like '%'
+        ORDER BY u.name, o.name
+      
+Query is not empty - executing query.
+Query duration time: 175 milliseconds
+dbo.abon
+dbo.client
+dbo.coach
+dbo.gadm40_blr_2
+dbo.geometry_columns
+dbo.hal
+dbo.record
+dbo.spatial_ref_sys
+dbo.SportPlaces
+Total fetch time: 0 milliseconds
+Fetch time: 0 milliseconds
+GetObjects for: Views
+Query str: 
+        SELECT DISTINCT convert(varchar(128),su.name) as object_schema,
+        convert(varchar(128),so.name) as object_name
+        FROM sys.schemas su, sysobjects so
+        WHERE so.type='V'
+        AND so.uid=su.schema_id
+        AND NOT
+        (
+        su.name IN ('INFORMATION_SCHEMA')
+        OR
+        (
+        su.name IN ('dbo')
+        AND
+        so.name IN ('sysconstraints', 'syssegments', 'sysalternates')
+        )
+        )
+        AND so.name like '%'
+        AND su.name like '%'
+        ORDER BY object_schema, object_name
+      
+Query is not empty - executing query.
+Query duration time: 18 milliseconds
+dbo.highPaidCoach
+dbo.paidClients
+Total fetch time: 0 milliseconds
+Fetch time: 0 milliseconds
+GetObjects for: Stored Procedures
+Query str: 
+        SELECT DISTINCT convert(varchar(128),su.name) as object_schema,
+        convert(varchar(128),so.name) as object_name
+        FROM sys.schemas su, sysobjects so
+        WHERE so.type='P'
+        AND so.uid=su.schema_id
+        AND NOT
+        (
+        su.name IN ('dbo')
+        AND
+        (so.name LIKE 'dt__%%' ESCAPE '_'
+        or
+        so.name IN ('sp_alterdiagram','sp_creatediagram', 'sp_dropdiagram', 'sp_helpdiagramdefinition', 'sp_helpdiagrams', 'sp_renamediagram', 'sp_upgraddiagrams'))
+        )
+        AND so.name like '%'
+        AND su.name like '%'
+        ORDER BY object_schema, object_name
+      
+Query is not empty - executing query.
+Query duration time: 14 milliseconds
+dbo.add_client
+dbo.add_coach
+dbo.add_hal
+dbo.AddCoachUsingHierarchy
+dbo.addSportPlace
+dbo.allSportPlaces
+dbo.CalculateShortestPath
+dbo.CalculateShortestPath2
+dbo.change_client
+dbo.change_coach
+dbo.change_hal
+dbo.checkPass
+dbo.drop_client
+dbo.drop_coach
+dbo.drop_hal
+dbo.EnlargeLocation
+dbo.getAllClients
+dbo.getAllCoaches
+dbo.getAllHals
+dbo.getCount
+dbo.GetCoverageMap
+dbo.GetPlaceMap
+dbo.GetStorageMap
+dbo.insertClient
+dbo.insertCoach
+dbo.insertRecord
+dbo.moveHid
+dbo.selectHid
+Total fetch time: 0 milliseconds
+Fetch time: 0 milliseconds
+GetObjects for: Functions
+Query str: 
+        SELECT DISTINCT convert(varchar(128),su.name) as object_schema,
+        convert(varchar(128),so.name) as object_name
+        FROM sys.schemas su, sysobjects so
+        WHERE so.type IN ('FN','IF','TF')
+        AND so.uid=su.schema_id
+        AND so.name like '%'
+        AND su.name like '%'
+        ORDER BY object_schema, object_name
+      
+Query is not empty - executing query.
+Query duration time: 16 milliseconds
+dbo.fn_diagramobjects
+dbo.isAllowed
+Total fetch time: 0 milliseconds
+Fetch time: 0 milliseconds
+GetObjects for: Triggers
+Query str: 
+        SELECT DISTINCT NULL as object_schema,
+        convert(varchar(128),so.name) as object_name
+        FROM sysobjects so
+        WHERE so.type='TR'
+        AND so.name like '%'
+        ORDER BY object_schema, object_name
+      
+Query is not empty - executing query.
+Query duration time: 8 milliseconds
+.insertClientMessage
+.insertCoachMessage
+Total fetch time: 0 milliseconds
+Fetch time: 0 milliseconds
+GetObjects for: Packages
+Query str: GetObjects for: User Accounts
+Query str: 
+        with user_priv as (select roleprinc.name roles, memberprinc.name users, class_desc, permission_name, object_name(perm.major_id) objName
+        from
+        sys.database_permissions perm
+        LEFT outer JOIN
+        sys.database_principals memberprinc ON perm.[grantee_principal_id] = memberprinc.[principal_id]
+
+        left outer JOIN
+        sys.database_role_members members ON memberprinc.[principal_id] = members.[member_principal_id]
+        left outer JOIN
+        sys.database_principals roleprinc ON roleprinc.[principal_id] = members.[role_principal_id] ),
+
+        priv_list as (
+        select distinct users, class_desc, permission_name, objName from user_priv where users like '%' and class_desc = 'DATABASE'
+        union
+        select distinct roleprinc.name users, class_desc, permission_name, object_name(perm.major_id) objName
+        from
+        sys.database_permissions perm
+        LEFT outer JOIN
+        sys.database_principals memberprinc ON perm.[grantee_principal_id] = memberprinc.[principal_id]
+
+        left outer JOIN
+        sys.database_role_members members ON memberprinc.[principal_id] = members.[member_principal_id]
+        left outer JOIN
+        sys.database_principals roleprinc ON roleprinc.[principal_id] = members.[role_principal_id]
+        where memberprinc.name in (select user_priv.roles from user_priv where users like '%') and class_desc = 'DATABASE' )
+
+        SELECT     users, cast(STUFF((SELECT ',' + permission_name
+        FROM priv_list
+        WHERE  users = a.users
+        ORDER BY users FOR xml path('')), 1, 1, '') as varchar(3000)) as privileges
+        FROM         priv_list a
+        WHERE     users IS NOT NULL
+        GROUP BY users, class_desc
+      
+Query is not empty - executing query.
+Query duration time: 150 milliseconds
+GetObjects for: User Defined Types
+Query str: 
+        SELECT
+        USER_NAME(schema_id) AS user_name,
+        name,
+        type_name(system_type_id) AS col_type,
+        CASE system_type_id
+        WHEN 167 THEN max_length
+        WHEN 175 THEN max_length
+        WHEN 239 THEN max_length
+        WHEN 231 THEN max_length
+        WHEN 173 THEN max_length
+        WHEN 165 THEN max_length
+        WHEN 61 THEN scale
+        WHEN 42 THEN scale
+        WHEN 43 THEN scale
+        WHEN 41 THEN scale
+        WHEN 108 THEN precision
+        WHEN 106 THEN precision
+        WHEN 60 THEN precision
+        WHEN 122 THEN precision
+        ELSE NULL
+        END col_width,
+        CASE system_type_id
+        WHEN 108 THEN scale
+        WHEN 106 THEN scale
+        WHEN 60 THEN scale
+        WHEN 122 THEN scale
+        ELSE NULL
+        END col_scale,
+        NULL col_name,
+        NULL AS colorder,
+        is_nullable
+        FROM sys.types
+        WHERE is_user_defined = 1
+        AND name like '%'
+        AND system_type_id != 243
+        UNION
+        SELECT USER_NAME(tt.schema_id) AS user_name,
+        tt.name,
+        st.name AS col_type,
+        CASE
+        WHEN type_name(cc.system_type_id) != st.name THEN NULL
+        WHEN cc.system_type_id = 167 THEN cc.max_length
+        WHEN cc.system_type_id = 175 THEN cc.max_length
+        WHEN cc.system_type_id = 239 THEN cc.max_length
+        WHEN cc.system_type_id = 231 THEN cc.max_length
+        WHEN cc.system_type_id = 173 THEN cc.max_length
+        WHEN cc.system_type_id = 165 THEN cc.max_length
+        WHEN cc.system_type_id = 61 THEN cc.scale
+        WHEN cc.system_type_id = 42 THEN cc.scale
+        WHEN cc.system_type_id = 43 THEN cc.scale
+        WHEN cc.system_type_id = 41 THEN cc.scale
+        WHEN cc.system_type_id = 108 THEN cc.precision
+        WHEN cc.system_type_id = 106 THEN cc.precision
+        WHEN cc.system_type_id = 60 THEN cc.precision
+        WHEN cc.system_type_id = 122 THEN cc.precision
+        ELSE NULL
+        END col_width,
+        CASE cc.system_type_id
+        WHEN 108 THEN cc.scale
+        WHEN 106 THEN cc.scale
+        WHEN 60 THEN cc.scale
+        WHEN 122 THEN cc.scale
+        ELSE NULL
+        END col_scale,
+        cc.name col_name,
+        column_id colorder, cc.is_nullable
+        FROM sys.table_types tt,
+        sys.columns cc
+        LEFT JOIN  sys.types st ON ( st.system_type_id = cc.system_type_id and st.user_type_id = cc.user_type_id)
+        WHERE cc.object_id = tt.type_table_object_id
+        AND tt.name like '%'
+        ORDER BY name, colorder
+      
+Query is not empty - executing query.
+Query duration time: 45 milliseconds
+Total fetch time: 0 milliseconds
+Fetch time: 0 milliseconds
+GetObjects for: Sequences
+Query str: 
+        select SCHEMA_NAME(schema_id) as SEQUENCE_OWNER, name as SEQUENCE_NAME, minimum_value as MIN_VALUE, maximum_value as MAX_VALUE,increment as INCREMENT_BY,
+        is_cycling as CYCLE_FLAG, NULL as ORDER_FLAG, cache_size as CACHE_SIZE,
+        CAST(current_value AS BIGINT) + CAST(increment AS BIGINT) as LAST_NUMBER from sys.sequences where SCHEMA_NAME(schema_id) like '%' and name like '%'
+        ORDER BY SEQUENCE_OWNER, SEQUENCE_NAME
+      
+Query is not empty - executing query.
+Query duration time: 11 milliseconds
+Total fetch time: 0 milliseconds
+Fetch time: 0 milliseconds
+GetObjects for: Synonyms
+Query str: GetObjects for: Macros
+Query str: GetObjects for: Exceptions
+Query str: GetObjects for: Events
+Query str: GetObjects for: Java
+Query str: 

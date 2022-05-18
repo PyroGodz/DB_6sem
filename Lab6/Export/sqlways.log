@@ -1,0 +1,438 @@
+
+SQLWays 10.22.3 Build 6944 64bit - Database and Application Migration Software.
+Copyright (c) 1999-2022 Ispirer Systems Ltd. All Rights Reserved.
+Timestamp: Tue May 17 21:55:55 2022
+
+OS: Unknown version
+OS Locale: Format - ru-RU (Russian); Location - Россия; Current language - ru-RU (Russian)
+
+Command Prompt: /D=SportPlace /SROW=1 /TARGET=Oracle /TU=system /TP=***** /IMPORD=Clean /IMPS=Windows /DIR=D:\Study\Practice\DB_6sem\Lab6\Export /STDEL=; /INI=D:\Study\Practice\DB_6sem\Lab6\sqlways_db.ini /PRJF=D:\Study\Practice\DB_6sem\Lab6\sqlways.xml /NSTOP /GCMD=sqlways_all.bat /LOG=sqlways.log /RPT=reports
+Ini file path: D:\Study\Practice\DB_6sem\Lab6\sqlways_db.ini
+Datasource alias: SportPlace
+Target database: Oracle 
+Import system: Windows
+
+This product is licensed to BSTU - Timothey - Belarus - Ispirer MnMTK 10 Microsoft SQL Server to Oracle Database Migration Demo License (1 month, 20220611)
+
+License Name: Ispirer MnMTK 10 Microsoft SQL Server to Oracle Database Migration Demo License
+Type of License: DEMO
+Migration of: Database
+Customization Requests: Not Included
+Support: General Support Included
+
+Period of Validity: Valid from May 11, 2022 until June 11, 2022
+
+Allowed directions:
+Microsoft SQL Server to Oracle
+
+Common restrictions:
+	Table            :	Objects count: 100	Objects total size: 2 GB	Object size: 2 GB
+	View             :	Objects count: 1	Objects total size: 500 lines	Object size: 500 lines
+	StoredProcedure  :	Objects count: 1	Objects total size: 500 lines	Object size: 500 lines
+	Function         :	Objects count: 1	Objects total size: 500 lines	Object size: 500 lines
+	Trigger          :	Objects count: 1	Objects total size: 500 lines	Object size: 500 lines
+	Package          :	Objects count: 1	Objects total size: 500 lines	Object size: 500 lines
+	Script           :	Objects count: 1	Objects total size: 500 lines	Object size: 500 lines
+
+Connecting to SportPlace...OK (Microsoft SQL Server  15.00.2000, 47 msec )
+Database driver info: 
+	Driver name: "SQLSRV32.DLL"
+	Driver version: 10.00.19041
+	ODBC version: 03.80.0000
+Database SportPlace (Microsoft SQL Server 15.0 for Microsoft SQL Server)
+
+Reading database structure...
+Reading tables (template dbo.abon| 
+            dbo.client| 
+            dbo.coach| 
+            dbo.gadm40_blr_2| 
+            dbo.geometry_columns| 
+            dbo.hal| 
+            dbo.record| 
+            dbo.spatial_ref_sys| 
+            dbo.SportPlaces)...Ok (9 tables, 18844 msec)
+Reading columns info:  
+Reading columns...OK (51 columns, 0 msec )
+Reading default values...OK (0 defaults, 0 msec )
+Reading identity properties...OK (6 identities, 0 msec )
+Reading primary keys...OK (8 keys, 0 msec )
+Reading foreign keys...OK (6 keys, 0 msec )
+Reading unique constraints...OK (0 constraints, 0 msec )
+Reading check constraints...OK (0 constraints, 0 msec )
+Reading indexes...OK (4 indexes, 0 msec )
+Reading comments...OK (0 comments, 0 msec )
+Reading rule bindings...OK (0 rule bindings, 437 msec )
+Reading views (template dbo.highPaidCoach| 
+            dbo.paidClients)...Ok (2 views, 188 msec)
+Reading stored procedures (template dbo.add_client| 
+            dbo.add_coach| 
+            dbo.add_hal| 
+            dbo.AddCoachUsingHierarchy| 
+            dbo.addSportPlace| 
+            dbo.allSportPlaces| 
+            dbo.CalculateShortestPath| 
+            dbo.CalculateShortestPath2| 
+            dbo.change_client| 
+            dbo.change_coach| 
+            dbo.change_hal| 
+            dbo.checkPass| 
+            dbo.drop_client| 
+            dbo.drop_coach| 
+            dbo.drop_hal| 
+            dbo.EnlargeLocation| 
+            dbo.getAllClients| 
+            dbo.getAllCoaches| 
+            dbo.getAllHals| 
+            dbo.getCount| 
+            dbo.GetCoverageMap| 
+            dbo.GetPlaceMap| 
+            dbo.GetStorageMap| 
+            dbo.insertClient| 
+            dbo.insertCoach| 
+            dbo.insertRecord| 
+            dbo.moveHid| 
+            dbo.selectHid)...Ok (28 stored procedures, 1203 msec)
+Reading functions (template dbo.fn_diagramobjects| 
+            dbo.isAllowed)...Ok (2 functions, 94 msec)
+Reading triggers (template insertClientMessage| 
+            insertCoachMessage)...Ok (2 triggers, 78 msec)
+
+Timestamp: Tue May 17 21:56:17 2022
+Executing query dbo.hal...Ok (94 msec)
+
+Exporting rows... Ok (3 rows exported, 0Kb, 0 sec )
+
+Generating DDL...Ok (2 secs)
+
+Source table:     dbo.hal
+Output table:     hal
+Output data file: D:\Study\Practice\DB_6sem\Lab6\Export\hal.txt
+Output format: column delimited (CSV)
+
+
+Timestamp: Tue May 17 21:56:19 2022
+Executing query dbo.abon...Ok (125 msec)
+
+Exporting rows... Ok (3 rows exported, 0Kb, 0 sec )
+
+Generating DDL...Ok (1 secs)
+
+Source table:     dbo.abon
+Output table:     abon
+Output data file: D:\Study\Practice\DB_6sem\Lab6\Export\abon.txt
+Output format: column delimited (CSV)
+
+
+Timestamp: Tue May 17 21:56:21 2022
+Executing query dbo.coach...Ok (125 msec)
+
+Exporting rows... Ok (7 rows exported, 0Kb, 0 sec )
+
+Generating DDL...Ok (1 secs)
+
+Source table:     dbo.coach
+Output table:     coach
+Output data file: D:\Study\Practice\DB_6sem\Lab6\Export\coach.txt
+Output format: column delimited (CSV)
+
+
+Timestamp: Tue May 17 21:56:23 2022
+Executing query dbo.client...Ok (110 msec)
+
+Exporting rows... Ok (14 rows exported, 0Kb, 0 sec )
+
+Generating DDL...Ok (1 secs)
+
+Source table:     dbo.client
+Output table:     client
+Output data file: D:\Study\Practice\DB_6sem\Lab6\Export\client.txt
+Output format: column delimited (CSV)
+
+
+Timestamp: Tue May 17 21:56:25 2022
+Executing query dbo.gadm40_blr_2...Ok (203 msec)
+
+Exporting rows... Ok (118 rows exported, 16Kb, 0 sec )
+
+Generating DDL...Ok (1 secs)
+
+Source table:     dbo.gadm40_blr_2
+Output table:     gadm40_blr_2
+Output data file: D:\Study\Practice\DB_6sem\Lab6\Export\gadm40_blr_2.txt
+Output format: column delimited (CSV)
+
+
+Timestamp: Tue May 17 21:56:27 2022
+Executing query dbo.geometry_columns...Ok (109 msec)
+
+Exporting rows... Ok (1 rows exported, 0Kb, 0 sec )
+
+Generating DDL...Ok (1 secs)
+
+Source table:     dbo.geometry_columns
+Output table:     geometry_columns
+Output data file: D:\Study\Practice\DB_6sem\Lab6\Export\geometry_columns.txt
+Output format: column delimited (CSV)
+
+
+Timestamp: Tue May 17 21:56:29 2022
+Executing query dbo.SportPlaces...Ok (110 msec)
+
+Exporting rows... Ok (12 rows exported, 1Kb, 0 sec )
+
+Generating DDL...Ok (1 secs)
+
+Source table:     dbo.SportPlaces
+Output table:     SportPlaces
+Output data file: D:\Study\Practice\DB_6sem\Lab6\Export\sportplaces.txt
+Output format: column delimited (CSV)
+
+
+Timestamp: Tue May 17 21:56:30 2022
+Executing query dbo.record...Ok (109 msec)
+
+Exporting rows... Ok (3 rows exported, 0Kb, 0 sec )
+
+Generating DDL...Ok (1 secs)
+
+Source table:     dbo.record
+Output table:     record
+Output data file: D:\Study\Practice\DB_6sem\Lab6\Export\record.txt
+Output format: column delimited (CSV)
+
+
+Timestamp: Tue May 17 21:56:32 2022
+Executing query dbo.spatial_ref_sys...Ok (94 msec)
+
+Exporting rows... Ok (2 rows exported, 1Kb, 0 sec )
+
+Generating DDL...Ok (0 secs)
+
+Source table:     dbo.spatial_ref_sys
+Output table:     spatial_ref_sys
+Output data file: D:\Study\Practice\DB_6sem\Lab6\Export\spatial_ref_sys.txt
+Output format: column delimited (CSV)
+
+
+Total: 9 table(s), 9 Ok, 0 Failed, 0 Skipped, 0 Warning(s), 163 row(s), 12 sec (0 sec Data), 18 Kb
+
+
+Timestamp: Tue May 17 21:56:34 2022
+
+Extracting View(dbo.highPaidCoach, 68 bytes, 68 symbols)...Ok
+Converting View(dbo.highPaidCoach)...Ok (1 lines, 3 measured, 0 sec), 3 of 500 LOC licensed, 1 of 2
+Extracting View(dbo.paidClients, 64 bytes, 64 symbols)...Ok
+Converting View(dbo.paidClients)...
+Conversion is denied by your license:
+paidClients - total number of object type "View" has been reached!
+The target script is equal to the source script!
+Skipped (1 lines, 2 measured, 0 sec), 5 of 500 LOC licensed, 2 of 2
+Extracting StoredProcedure(dbo.add_client, 249 bytes, 249 symbols)...Ok
+Converting StoredProcedure(dbo.add_client)...Ok (10 lines, 8 measured, 0 sec), 10 of 500 LOC licensed, 1 of 28
+Extracting StoredProcedure(dbo.add_coach, 171 bytes, 171 symbols)...Ok
+Converting StoredProcedure(dbo.add_coach)...
+Conversion is denied by your license:
+add_coach - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (8 lines, 6 measured, 0 sec), 18 of 500 LOC licensed, 2 of 28
+Extracting StoredProcedure(dbo.add_hal, 128 bytes, 128 symbols)...Ok
+Converting StoredProcedure(dbo.add_hal)...
+Conversion is denied by your license:
+add_hal - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (7 lines, 4 measured, 0 sec), 25 of 500 LOC licensed, 3 of 28
+Extracting StoredProcedure(dbo.AddCoachUsingHierarchy, 459 bytes, 459 symbols)...Ok
+Converting StoredProcedure(dbo.AddCoachUsingHierarchy)...
+Conversion is denied by your license:
+AddCoachUsingHierarchy - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (19 lines, 14 measured, 0 sec), 44 of 500 LOC licensed, 4 of 28
+Extracting StoredProcedure(dbo.addSportPlace, 468 bytes, 468 symbols)...Ok
+Converting StoredProcedure(dbo.addSportPlace)...
+Conversion is denied by your license:
+addSportPlace - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (19 lines, 15 measured, 0 sec), 63 of 500 LOC licensed, 5 of 28
+Extracting StoredProcedure(dbo.allSportPlaces, 144 bytes, 144 symbols)...Ok
+Converting StoredProcedure(dbo.allSportPlaces)...
+Conversion is denied by your license:
+allSportPlaces - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (9 lines, 5 measured, 0 sec), 72 of 500 LOC licensed, 6 of 28
+Extracting StoredProcedure(dbo.CalculateShortestPath, 352 bytes, 352 symbols)...Ok
+Converting StoredProcedure(dbo.CalculateShortestPath)...
+Conversion is denied by your license:
+CalculateShortestPath - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (11 lines, 11 measured, 0 sec), 83 of 500 LOC licensed, 7 of 28
+Extracting StoredProcedure(dbo.CalculateShortestPath2, 353 bytes, 353 symbols)...Ok
+Converting StoredProcedure(dbo.CalculateShortestPath2)...
+Conversion is denied by your license:
+CalculateShortestPath2 - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (11 lines, 11 measured, 0 sec), 94 of 500 LOC licensed, 8 of 28
+Extracting StoredProcedure(dbo.change_client, 327 bytes, 327 symbols)...Ok
+Converting StoredProcedure(dbo.change_client)...
+Conversion is denied by your license:
+change_client - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (12 lines, 10 measured, 0 sec), 106 of 500 LOC licensed, 9 of 28
+Extracting StoredProcedure(dbo.change_coach, 204 bytes, 204 symbols)...Ok
+Converting StoredProcedure(dbo.change_coach)...
+Conversion is denied by your license:
+change_coach - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (10 lines, 7 measured, 0 sec), 116 of 500 LOC licensed, 10 of 28
+Extracting StoredProcedure(dbo.change_hal, 158 bytes, 158 symbols)...Ok
+Converting StoredProcedure(dbo.change_hal)...
+Conversion is denied by your license:
+change_hal - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (8 lines, 5 measured, 0 sec), 124 of 500 LOC licensed, 11 of 28
+Extracting StoredProcedure(dbo.checkPass, 412 bytes, 412 symbols)...Ok
+Converting StoredProcedure(dbo.checkPass)...
+Conversion is denied by your license:
+checkPass - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (13 lines, 13 measured, 0 sec), 137 of 500 LOC licensed, 12 of 28
+Extracting StoredProcedure(dbo.drop_client, 124 bytes, 124 symbols)...Ok
+Converting StoredProcedure(dbo.drop_client)...
+Conversion is denied by your license:
+drop_client - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (7 lines, 4 measured, 0 sec), 144 of 500 LOC licensed, 13 of 28
+Extracting StoredProcedure(dbo.drop_coach, 122 bytes, 122 symbols)...Ok
+Converting StoredProcedure(dbo.drop_coach)...
+Conversion is denied by your license:
+drop_coach - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (7 lines, 4 measured, 0 sec), 151 of 500 LOC licensed, 14 of 28
+Extracting StoredProcedure(dbo.drop_hal, 118 bytes, 118 symbols)...Ok
+Converting StoredProcedure(dbo.drop_hal)...
+Conversion is denied by your license:
+drop_hal - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (7 lines, 4 measured, 0 sec), 158 of 500 LOC licensed, 15 of 28
+Extracting StoredProcedure(dbo.EnlargeLocation, 280 bytes, 280 symbols)...Ok
+Converting StoredProcedure(dbo.EnlargeLocation)...
+Conversion is denied by your license:
+EnlargeLocation - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (10 lines, 9 measured, 0 sec), 168 of 500 LOC licensed, 16 of 28
+Extracting StoredProcedure(dbo.getAllClients, 60 bytes, 60 symbols)...Ok
+Converting StoredProcedure(dbo.getAllClients)...
+Conversion is denied by your license:
+getAllClients - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (3 lines, 2 measured, 0 sec), 171 of 500 LOC licensed, 17 of 28
+Extracting StoredProcedure(dbo.getAllCoaches, 59 bytes, 59 symbols)...Ok
+Converting StoredProcedure(dbo.getAllCoaches)...
+Conversion is denied by your license:
+getAllCoaches - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (3 lines, 2 measured, 0 sec), 174 of 500 LOC licensed, 18 of 28
+Extracting StoredProcedure(dbo.getAllHals, 54 bytes, 54 symbols)...Ok
+Converting StoredProcedure(dbo.getAllHals)...
+Conversion is denied by your license:
+getAllHals - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (3 lines, 2 measured, 0 sec), 177 of 500 LOC licensed, 19 of 28
+Extracting StoredProcedure(dbo.getCount, 78 bytes, 78 symbols)...Ok
+Converting StoredProcedure(dbo.getCount)...
+Conversion is denied by your license:
+getCount - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (1 lines, 3 measured, 0 sec), 180 of 500 LOC licensed, 20 of 28
+Extracting StoredProcedure(dbo.GetCoverageMap, 634 bytes, 634 symbols)...Ok
+Converting StoredProcedure(dbo.GetCoverageMap)...
+Conversion is denied by your license:
+GetCoverageMap - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (32 lines, 20 measured, 0 sec), 212 of 500 LOC licensed, 21 of 28
+Extracting StoredProcedure(dbo.GetPlaceMap, 548 bytes, 548 symbols)...Ok
+Converting StoredProcedure(dbo.GetPlaceMap)...
+Conversion is denied by your license:
+GetPlaceMap - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (25 lines, 17 measured, 0 sec), 237 of 500 LOC licensed, 22 of 28
+Extracting StoredProcedure(dbo.GetStorageMap, 526 bytes, 526 symbols)...Ok
+Converting StoredProcedure(dbo.GetStorageMap)...
+Conversion is denied by your license:
+GetStorageMap - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (25 lines, 16 measured, 0 sec), 262 of 500 LOC licensed, 23 of 28
+Extracting StoredProcedure(dbo.insertClient, 229 bytes, 229 symbols)...Ok
+Converting StoredProcedure(dbo.insertClient)...
+Conversion is denied by your license:
+insertClient - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (9 lines, 7 measured, 0 sec), 271 of 500 LOC licensed, 24 of 28
+Extracting StoredProcedure(dbo.insertCoach, 222 bytes, 222 symbols)...Ok
+Converting StoredProcedure(dbo.insertCoach)...
+Conversion is denied by your license:
+insertCoach - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (9 lines, 7 measured, 0 sec), 280 of 500 LOC licensed, 25 of 28
+Extracting StoredProcedure(dbo.insertRecord, 159 bytes, 159 symbols)...Ok
+Converting StoredProcedure(dbo.insertRecord)...
+Conversion is denied by your license:
+insertRecord - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (7 lines, 5 measured, 0 sec), 287 of 500 LOC licensed, 26 of 28
+Extracting StoredProcedure(dbo.moveHid, 822 bytes, 822 symbols)...Ok
+Converting StoredProcedure(dbo.moveHid)...
+Conversion is denied by your license:
+moveHid - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (27 lines, 25 measured, 0 sec), 314 of 500 LOC licensed, 27 of 28
+Extracting StoredProcedure(dbo.selectHid, 222 bytes, 222 symbols)...Ok
+Converting StoredProcedure(dbo.selectHid)...
+Conversion is denied by your license:
+selectHid - total number of object type "StoredProcedure" has been reached!
+The target script is equal to the source script!
+Skipped (12 lines, 7 measured, 0 sec), 326 of 500 LOC licensed, 28 of 28
+Extracting Function(dbo.fn_diagramobjects, 1643 bytes, 1643 symbols)...Ok
+Converting Function(dbo.fn_diagramobjects)...Ok (45 lines, 50 measured, 1 sec), 50 of 500 LOC licensed, 1 of 2
+Extracting Function(dbo.isAllowed, 308 bytes, 308 symbols)...Ok
+Converting Function(dbo.isAllowed)...
+Conversion is denied by your license:
+isAllowed - total number of object type "Function" has been reached!
+The target script is equal to the source script!
+Skipped (13 lines, 10 measured, 0 sec), 63 of 500 LOC licensed, 2 of 2
+Extracting Trigger(insertClientMessage, 241 bytes, 241 symbols)...Ok
+Converting Trigger(insertClientMessage)...Ok (11 lines, 8 measured, 0 sec), 11 of 500 LOC licensed, 1 of 2
+Extracting Trigger(insertCoachMessage, 239 bytes, 239 symbols)...Ok
+Converting Trigger(insertCoachMessage)...
+Conversion is denied by your license:
+insertCoachMessage - total number of object type "Trigger" has been reached!
+The target script is equal to the source script!
+Skipped (11 lines, 8 measured, 0 sec), 22 of 500 LOC licensed, 2 of 2
+Extracting Function(SWF_OBJECT_ID, 2050 bytes)...Ok
+
+Import order "Clean" used.
+Creating general import script (sqlways_all.bat)...Ok
+
+Disconnected from SportPlace.
+
+Total: 9 table(s), 9 Ok, 0 Failed, 0 Skipped, 0 Warning(s), 163 row(s), 12 sec (0 sec Data), 18 Kb
+
+Total: 2 view(s), 1 Ok, 0 Failed, 1 Skipped, 0 Warning(s), 2 line(s), 5 measured, 132 byte(s), 132 symbol(s), 0 sec
+
+Total: 28 stored procedure(s), 1 Ok, 0 Failed, 27 Skipped, 0 Warning(s), 324 line(s), 243 measured, 7682 byte(s), 7682 symbol(s), 0 sec
+
+Total: 2 function(s), 1 Ok, 0 Failed, 1 Skipped, 0 Warning(s), 58 line(s), 60 measured, 1951 byte(s), 1951 symbol(s), 1 sec
+
+Total: 2 trigger(s), 1 Ok, 0 Failed, 1 Skipped, 0 Warning(s), 22 line(s), 16 measured, 480 byte(s), 480 symbol(s), 0 sec
+
+
+Timestamp: Tue May 17 21:56:42 2022
+
+Elapsed time: 47 sec
+
+Total memory used: 836740 KB
+Total number of objects: 43 object(s)
+Total lines of code for objects: 406 line(s)
+Total measured lines of code for objects: 324 line(s)
+Total number of symbols for objects: 10245 symbol(s)
+Total number of bytes for objects: 28 Kb
+Total row counts: 163 row(s)
