@@ -1,0 +1,118 @@
+lab11.db
+
+create table coach(
+    id integer primary key AUTOINCREMENT,
+    FIO text,
+    payment integer
+);
+
+create table client(
+    id integer primary key AUTOINCREMENT,
+    SecondName text,
+    FirstName text,
+    Phone text,
+    coachId integer,
+    FOREIGN KEY (coachId) REFERENCES coach(id)
+);
+
+create table hal(
+    id integer primary key AUTOINCREMENT,
+    name text
+);
+
+create table abon(
+    id integer primary key AUTOINCREMENT,
+    descr text,
+    price integer,
+    halId integer,
+    FOREIGN KEY (halId) REFERENCES hal(id)
+);
+
+create table record(
+    clientId integer,
+    abonId integer,
+    startAbon text,
+    endAbon text,
+    isPaid integer,
+    FOREIGN KEY (abonId) REFERENCES abon(id),
+    FOREIGN KEY (clientId) REFERENCES client(id)
+);
+
+insert into coach(FIO, payment) values 
+    ('n.e.t', 228),
+    ('d.a.s', 322),
+    ('a.a.a.', 385),
+    ('q.q.q.', 566);
+
+insert into client(SecondName, FirstName, Phone, coachId) values 
+    ('Myad','Tim','293344', 1),
+    ('Zak','Nik','445545', 2),
+    ('Ivash','Mak','553344', 2),
+    ('Ulas','Naz','121213', 3);\
+
+insert into  hal(name) values
+	('Min'),
+	('Dosh'),
+	('Fer'),
+	('Kil');
+
+insert into  abon(descr, price, halId) values
+	('smth', 22, 1),
+	('asdf', 33, 2),
+	('qwerasd', 44, 3),
+	('asdfa', 11, 4);
+
+insert into  record(clientId, abonId, startAbon, endAbon, isPaid) values
+	( 1, 1,'2022-06-01','2022-08-01', 1),
+	( 2, 2,'2022-04-01','2022-06-01', 1),
+	( 3, 3,'2022-05-01','2022-07-01', 1),
+	( 4, 4,'2022-06-01','2022-07-01', 1);
+
+------------------------Task4-------------
+create view view1 as
+select *
+from coach
+where payment > 300;
+
+select * from view1;
+
+------------------------Task5-------------
+CREATE TABLE AUDIT(
+   auditId INT NOT NULL,
+   Date text
+);
+
+CREATE TRIGGER audit_log AFTER INSERT 
+ON coach
+BEGIN
+   INSERT INTO AUDIT(auditId, date) VALUES (new.ID, datetime('now'));
+END;
+insert into coach(FIO, payment) values 
+    ('4_Audit', 666);
+
+select * from AUDIT;
+
+
+------------------------Task6-------------
+select * from coach;
+select * from clientId;
+select * from hal;
+select * from abon;
+select * from record;
+select * from view1;
+
+------------------------Task7-------------
+BEGIN TRANSACTION;
+update coach set payment = 666 where id = 1;
+select * from coach;
+commit;
+select * from coach;
+
+BEGIN;
+update coach set payment = 555 where id = 1;
+select * from coach;
+rollback;
+select * from coach;
+
+delete from coach
+where id =4;

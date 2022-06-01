@@ -339,3 +339,76 @@ EXTERNAL NAME ReadTextLib.[Address];
 -----------------------------Lab_4----------------------------------------
 
 select * from gadm40_blr_2
+
+-----------------------------Lab_9----------------------------------------
+select * from coach
+select * from client
+select * from hal
+select * from abon
+select * from record
+
+insert into coach values ( 'Генадий Аркадий Леонидович', 535),( 'Глукома Константин Мозгович', 322),( 'Сидор Яблок Джекович', 444);
+insert into coach values ( 'Фибонач Ваня Иван', 531),( 'Икаров Зевс Стасянович', 322),( 'Хиджабов Адж Кин', 444),( 'Хин Ло Цзи', 221),( 'Вин Вожэ Кыг', 431 ),( 'Ямок Крич Кон', 123),( 'Якур Вар Джи', 143),( 'Кин Фо Джи', 553),( ' Ямур Сын Сон', 343),( 'Явар Джи Богд', 437),( 'Фин Ла Джи', 878),( 'Ниц Вац Шнейдж', 787),( 'Лоу Бан Джи', 891),( 'Бих Чжо Дан', 121),( 'Фан Джи Ман', 767),( 'Кун Ла Пир', 656),( 'Пирамид Кун Ваъ', 989);
+insert into client values ( 'Петров', 'Петр', '375296663322',1), ( 'Семенов', 'Семен', '375291112233',2), ( 'Дмитро', 'Дима', '375292329988',3);
+insert into client values ( 'Вин', 'Джо', 'Сын',13), ( 'Лао', 'Цзи', 'Кон',12), ( 'Вин', 'Бо', 'Ци', 11), ( 'Жан', 'Ла', 'Пэн',10), ( 'Кинг', 'Панч', 'Мен',9), ( 'Лэпс', 'Конг', 'Лин',8), ( 'Вар', 'Цзи', 'Фанжэ',7), ( 'Цзи', 'Кан', 'Воу',4), ( 'Фин', 'Ляо', 'Жо',5);
+insert into hal values  ('Гимнастический зал'), ('Бассейн'),('Зал аэробики');
+insert into hal values  ('Такой зал'),('Сякой зал'),('Инако зал'),('Карате зал'),('Спортзал'),('Не зал'),('Душ'),('Туалет'),('Мокрый зал'),('Красивый зал'),('Вонючий зал');
+insert into abon values ('Спортивный',99,1), ('Русалка',101,2), ('Классный', 88,3);
+insert into abon values ('Для качков',123,5), ('Для лысых',121,3), ('Для волосатых', 98,14), ('Для птиц',11 ,6), ('Разуваться при входе', 12, 7), ('Без ног ONLY', 0, 8), ('С компом', 55, 9), ('С собакой', 77, 10), ('Для кошатников', 99, 11), ('Для КРЫС', 100, 12);
+insert into record values (34,16,'2022-03-01','2022-05-01',0), (36,15,'2022-03-01','2022-05-01',0), (35,14,'2022-03-01','2022-05-01',0), (37,13,'2022-03-01','2022-05-01',0), (38, 12,'2022-03-01','2022-05-01',0), (39,11,'2022-03-08','2022-05-02',0), (40, 10,'2022-03-07','2022-05-03',0), (41,9,'2022-03-06','2022-05-04',0), (42,10,'2022-03-05','2022-05-05',0), (43,8,'2022-03-04','2022-05-06',0), (44,7,'2022-03-03','2022-07-01',0), (45, 13,'2022-03-02','2022-05-09',0);
+
+insert into record values (40, 10,'2022-03-07','2022-05-03',0), (40,9,'2022-03-06','2022-05-04',0), (40,10,'2022-03-05','2022-05-05',0), (40,8,'2022-03-04','2022-05-06',0), (40,7,'2022-03-03','2022-07-01',0), (40, 13,'2022-03-02','2022-05-09',0);
+--Task 2 --- Объем услуг
+SELECT count(*) FROM abon
+	WHERE price BETWEEN 60 AND 200;
+
+SELECT Id, descr, price
+	,sum(price) OVER() as "Объем услуг"
+	,(100.00*price / (sum(price) OVER())) AS "Percent"  
+FROM abon   
+	WHERE price BETWEEN 60 AND 200
+
+SELECT max(price),
+	(100.00*max(price)/ sum(price)) as "Porc"
+	from abon
+	WHERE price BETWEEN 60 AND 200
+
+--Task 3
+SELECT * , ROW_NUMBER() OVER(PARTITION BY clientId ORDER BY endAbon) AS rownum
+FROM record;
+
+--4
+SELECT count(*) FROM record;
+
+delete x from 
+(
+  select *, rn=row_number() over (partition by clientId order by endAbon)
+  from record 
+) x
+
+where rn > 1;
+
+
+
+--5
+select * from
+(select price,
+		record.clientId,
+		record.startAbon,
+		 sum(price) over (partition by record.clientId) as [count],
+	rn = row_number() over (partition by record.clientId order by record.startAbon desc)
+	from record join abon on abon.id = record.abonId
+	) x
+	where rn between 1 and 6;
+
+--6
+select * from(
+	select hal.name, count(price) over (partition by hal.id ) as "Наиболее использованные",
+	rn = row_number() over (partition by hal.id order by hal.name desc) 
+	from hal join abon on abon.halId = hal.id 
+	) x
+	where rn < 2
+
+	--или 
+
+	select hal.name, cnt = count(price) over (partition by hal.id )  from hal join abon on abon.halId = hal.id order by cnt desc;
