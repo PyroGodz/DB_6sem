@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "cXabKJYcMER22kigacVNvJAvKAyxR66/Fz1ecHKBSj3qGPzVYorHz7HS7XXulrboASdzq0dp4q6VsprWz2KBFA==",
+  "success": true,
+  "projectFilePath": "D:\\Study\\Practice\\DB_6sem\\Lab11\\WorkingApp\\Lab11\\Lab11\\Lab11.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.5\\microsoft.data.sqlite.core.6.0.5.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.0\\sqlitepclraw.bundle_e_sqlite3.2.1.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\sqlitepclraw.core\\2.1.0\\sqlitepclraw.core.2.1.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.0\\sqlitepclraw.lib.e_sqlite3.2.1.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.0\\sqlitepclraw.provider.e_sqlite3.2.1.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
+  "logs": []
+}

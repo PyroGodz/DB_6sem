@@ -5,4 +5,32 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Program.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="lab11.db" />
+    <None Remove="sqlite3.exe" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="sqlite3.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="lab11.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Program.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="4.1.0" />
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="6.0.5" />
+    <PackageReference Include="SQLitePCLRaw.bundle_winsqlite3" Version="2.1.0" />
+  </ItemGroup>
+
 </Project>
